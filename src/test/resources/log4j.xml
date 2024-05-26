@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE log4j:configuration PUBLIC "-//logj/logj Configuration//EN" "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="https://jakarta.apache.org/log4j/">
+
+    <appender name="AutomationInfo" class="org.apache.log4j.RollingFileAppender">
+
+        <param name="append" value="true"/>
+
+        <param name="Threshold" value="INFO" />
+
+        <param name="File" value="Logs\\Automation.log"/>
+
+        <param name="MaxFileSize" value="1GB"/>
+
+        <layout class="org.apache.log4j.PatternLayout">
+
+            <param name="ConversionPattern" value="%d %-5p [%c{1}] %m %n" />
+
+        </layout>
+
+    </appender>
+
+    <root>
+
+        <priority value="INFO"/>
+
+        <appender-ref ref="AutomationInfo"/>
+
+    </root>
+
+</log4j:configuration>
